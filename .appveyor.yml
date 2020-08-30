@@ -19,13 +19,3 @@ build_script:
 test_script:
   - yarn lint && yarn test  # скрипт тестирования
 
-environment:
-  my_variable:
-    secure: AHqZsGNbKL+RxqV2hVEAbGM8RTIGSbxiD1MI16xTYS+IXcuQqLd/6z/LalapwHdt
-
-deploy_script: # скрипт развёртывания
-  - git config --global credential.helper store
-  - git config --global user.name AppVeyor
-  - git config --global user.email ci@appveyor.com
-  - echo "https://$my_variable1:x-oauth-basic@github.com" > "$HOME/.git-credentials"
-  - npx push-dir --dir=dist --branch=gh-pages --force --verbose
