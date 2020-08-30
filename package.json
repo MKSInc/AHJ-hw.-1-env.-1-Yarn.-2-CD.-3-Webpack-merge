@@ -6,7 +6,7 @@
     "start": "webpack-dev-server --mode development",
     "build": "webpack --mode production",
     "lint": "eslint .",
-    "test": "jest --coverage"
+    "test": "jest --coverage --passWithNoTests"
   },
   "repository": "https://github.com/MKSInc/AHJ-hw.-1-env.-1-Yarn.-2-CD.-3-Webpack-merge.git",
   "author": "Maksim <pyshkov.maksim@gmail.com>",
