@@ -25,13 +25,15 @@ environment:
     var: abc
 
 deploy_script: # скрипт развёртывания
-  - echo test
-  - echo secure
-  - echo $secure
-  - echo var
-  - echo var
-  - echo "text/var:text"
-  - echo "text/$var:text"
+  - echo $env:secure
+  - echo $env:my_variable
+  - echo $env:my_variable:secure
+  - echo $env:my_variable.secure
+  - echo $env.secure
+  - echo $env.my_variable.secure
+  - echo $environment.my_variable.secure
+  - echo $env:var
+  - echo "text/$env:var:text"
   - git config --global credential.helper store
   - git config --global user.name AppVeyor
   - git config --global user.email ci@appveyor.com
