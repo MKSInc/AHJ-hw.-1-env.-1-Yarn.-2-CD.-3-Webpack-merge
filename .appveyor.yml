@@ -24,7 +24,6 @@ environment:
     secure: AHqZsGNbKL+RxqV2hVEAbGM8RTIGSbxiD1MI16xTYS+IXcuQqLd/6z/LalapwHdt
 
 deploy_script: # скрипт развёртывания
-  - echo $my_variable
   - git config --global credential.helper store
   - git config --global user.name AppVeyor
   - git config --global user.email ci@appveyor.com
