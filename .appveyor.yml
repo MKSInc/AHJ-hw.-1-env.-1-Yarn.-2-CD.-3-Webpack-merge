@@ -24,7 +24,12 @@ environment:
     secure: AHqZsGNbKL+RxqV2hVEAbGM8RTIGSbxiD1MI16xTYS+IXcuQqLd/6z/LalapwHdt
     var: abc
 
+variables:
+  NODE_IMAGE: node:10
+
 deploy_script: # скрипт развёртывания
+  - echo $NODE_IMAGE
+  - echo $secure # это все попытки получить значения переменной secure
   - echo $env:secure
   - echo $env:my_variable
   - echo $env:my_variable:secure
