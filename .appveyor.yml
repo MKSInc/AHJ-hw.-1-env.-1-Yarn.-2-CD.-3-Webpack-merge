@@ -22,8 +22,16 @@ test_script:
 environment:
   my_variable:
     secure: AHqZsGNbKL+RxqV2hVEAbGM8RTIGSbxiD1MI16xTYS+IXcuQqLd/6z/LalapwHdt
+    var: abc
 
 deploy_script: # скрипт развёртывания
+  - echo test
+  - echo secure
+  - echo $secure
+  - echo var
+  - echo var
+  - echo "text/var:text"
+  - echo "text/$var:text"
   - git config --global credential.helper store
   - git config --global user.name AppVeyor
   - git config --global user.email ci@appveyor.com
