@@ -20,16 +20,13 @@ test_script:
   - yarn lint && yarn test  # скрипт тестирования
 
 environment:
-  var1: 123
-  secure: AHqZsGNbKL+RxqV2hVEAbGM8RTIGSbxiD1MI16xTYS+IXcuQqLd/6z/LalapwHdt
+  my_variable:
+    secure: AHqZsGNbKL+RxqV2hVEAbGM8RTIGSbxiD1MI16xTYS+IXcuQqLd/6z/LalapwHdt
 
 deploy_script: # скрипт развёртывания
-  - echo $var1
-  - echo $secure
-  - echo "Hello World"
-  - echo "text/$var1:text"
+  - echo $my_variable
   - git config --global credential.helper store
   - git config --global user.name AppVeyor
   - git config --global user.email ci@appveyor.com
-  - echo "https://$secure:x-oauth-basic@github.com" > "$HOME/.git-credentials"
+  - echo "https://$my_variable:x-oauth-basic@github.com" > "$HOME/.git-credentials"
   - npx push-dir --dir=dist --branch=gh-pages --force --verbose
