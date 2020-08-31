@@ -1,4 +1,6 @@
 [![Build status](https://ci.appveyor.com/api/projects/status/fnjbdiogic6exid0?svg=true)](https://ci.appveyor.com/project/MKSInc/ahj-hw-1-env-1-yarn-2-cd-3-webpack-merge)
+
+### [Gh-pages](https://mksinc.github.io/AHJ-hw.-1-env.-1-Yarn.-2-CD.-3-Webpack-merge/)
 # 1. Домашнее задание к лекции «Рабочее окружение»
 
 **Важно**: все задачи к данной лекции можно выполнить в виде одного репозитория (т.е. допускается не делать отдельные репозитории на каждую задачу).
